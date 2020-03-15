@@ -13,3 +13,9 @@ sudo apt update
 sudo env DEBIAN_FRONTEND=noninteractive apt -y upgrade
 sudo apt install -y apache2-utils apt-transport-https build-essential cmake curl default-jdk dnsutils dstat git jq libboost-filesystem-dev libgoogle-perftools-dev libzip-dev locales moreutils most mtr-tiny net-tools nvidia-compute-utils-435 nvidia-driver-435 nvidia-headless-435 nvidia-utils-435 ocl-icd-opencl-dev p7zip-full pigz rsync sharutils software-properties-common sysstat tightvncserver unrar unzip vim-nox wget zsh zsh-syntax-highlighting zstd zlib1g-dev
 sudo apt clean
+
+# Lizzie
+cd /tmp
+wget https://github.com/featurecat/lizzie/releases/download/0.7.2/Lizzie.0.7.2.Mac-Linux.zip
+cd ~
+unzip /tmp/Lizzie.0.7.2.Mac-Linux.zip
