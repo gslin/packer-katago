@@ -1,0 +1,38 @@
+{
+    "builders": [
+        {
+            "type": "amazon-ebs",
+            "name": "katago-us-east-1",
+            "ami_description": "KataGo (us-east-1)",
+            "profile": "default",
+            "region": "us-east-1",
+            "source_ami": "ami-046842448f9e74e7d",
+            "instance_type": "t3a.nano",
+            "ssh_username": "ubuntu",
+            "ami_name": "katago-{{isotime \"20060102-150405\"}}",
+            "tags": {
+                "Name": "katago-{{isotime \"20060102-150405\"}}"
+            },
+            "subnet_id": "subnet-27714642",
+            "security_group_ids": [
+                "sg-0ef8f496b382f883c"
+            ],
+            "communicator": "ssh",
+            "ssh_pty": true
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "inline": [
+                "/usr/bin/cloud-init status --wait"
+            ]
+        },
+        {
+            "type": "shell",
+            "scripts": [
+                "provision-katago.sh"
+            ]
+        }
+    ]
+}
