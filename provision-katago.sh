@@ -19,3 +19,16 @@ cd /tmp
 wget https://github.com/featurecat/lizzie/releases/download/0.7.2/Lizzie.0.7.2.Mac-Linux.zip
 cd ~
 unzip /tmp/Lizzie.0.7.2.Mac-Linux.zip
+
+# KataGo (software)
+cd ~
+git clone https://github.com/lightvector/KataGo.git
+cd ~/KataGo/cpp
+cmake . -DBUILD_MCTS=1 -DUSE_BACKEND=OPENCL -DUSE_TCMALLOC=1
+make -j4
+cp ~/KataGo/cpp/katago ~/Lizzie
+
+# KataGo (net)
+cd ~/Lizzie
+wget https://d3dndmfyhecmj0.cloudfront.net/g170/neuralnets/g170-b40c256x2-s1349368064-d524332537.zip https://d3dndmfyhecmj0.cloudfront.net/g170/neuralnets/g170-b30c320x2-s1287828224-d525929064.zip https://d3dndmfyhecmj0.cloudfront.net/g170/neuralnets/g170e-b20c256x2-s2430231552-d525879064.zip
+echo *.zip | xargs -n1 unzip
