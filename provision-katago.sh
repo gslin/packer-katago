@@ -99,5 +99,6 @@ end
 EOF
 
 # reboot script
-echo "@reboot tightvncserver -depth 24 -geometry 1680x1050" > ~/crontab.ubuntu
+echo "USER=ubuntu" > ~/crontab.ubuntu
+echo "@reboot tightvncserver -depth 24 -geometry 1680x1050 > /tmp/tightvncserver.log 2>&1" >> ~/crontab.ubuntu
 crontab ~/crontab.ubuntu
