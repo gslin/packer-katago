@@ -64,7 +64,7 @@ cd ~
 git clone https://github.com/lightvector/KataGo.git
 cd ~/KataGo/cpp
 cmake . -DBUILD_MCTS=1 -DUSE_BACKEND=OPENCL -DUSE_TCMALLOC=1
-make -j4
+make -j8
 cp ~/KataGo/cpp/katago ~/Lizzie
 
 # KataGo (net)
