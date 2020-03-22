@@ -83,3 +83,9 @@ cd ~/Lizzie
 exec java -jar lizzie.jar
 EOF
 chmod 755 ~/Lizzie.run
+
+# IceWM menu
+mkdir ~/.icewm
+cd ~/.icewm
+cp /usr/share/icewm/menu ~/.icewm/menu
+echo "prog Lizzie Lizzie /home/ubuntu/Lizzie.run" >> ~/.icewm/menu
