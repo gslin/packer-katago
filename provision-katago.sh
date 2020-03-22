@@ -12,9 +12,6 @@ sudo sysctl -p /etc/sysctl.d/99-tcp.conf
 sudo apt update
 sudo env DEBIAN_FRONTEND=noninteractive apt -y upgrade
 sudo apt install -y \
-     \
-     \
-     \
     apache2-utils \
     apt-transport-https \
     build-essential \
