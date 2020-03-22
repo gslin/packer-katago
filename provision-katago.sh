@@ -74,6 +74,77 @@ wget \
     https://github.com/lightvector/KataGo/releases/download/v1.3.3/g170-b30c320x2-s1287828224-d525929064.bin.gz \
     https://github.com/lightvector/KataGo/releases/download/v1.3.3/g170-b40c256x2-s1349368064-d524332537.bin.gz
 
+# Lizzie + Katago
+cat > ~/Lizzie/config.txt <<EOF
+{
+  "leelaz": {
+    "max-analyze-time-minutes": 99999,
+    "analyze-update-interval-centisec": 10,
+    "network-file": "lznetwork.gz",
+    "_comment": "note, network-file is obselete in Lizzie 0.7+, ignore network-file, kept for compatibility",
+    "max-game-thinking-time-seconds": 2,
+    "engine-start-location": ".",
+    "avoid-keep-variations": 30,
+    "engine-command": "./katago gtp -model g170-b40c256x2-s1349368064-d524332537.bin.gz -config gtp_example.cfg",
+    "print-comms": false,
+    "show-lcb-winrate": false
+  },
+  "ui": {
+    "comment-font-size": 0,
+    "board-color": [
+      217,
+      152,
+      77
+    ],
+    "shadow-size": 100,
+    "show-winrate": true,
+    "autosave-interval-seconds": -1,
+    "append-winrate-to-comment": false,
+    "fancy-board": true,
+    "show-captured": true,
+    "replay-branch-interval-seconds": 1,
+    "panel-ui": false,
+    "weighted-blunder-bar-height": false,
+    "katago-estimate-mode": "small",
+    "win-rate-always-black": false,
+    "show-border": false,
+    "show-move-number": false,
+    "winrate-stroke-width": 3,
+    "show-next-moves": true,
+    "show-comment": true,
+    "show-leelaz-variation": true,
+    "theme": "default",
+    "min-playout-ratio-for-stats": 0.1,
+    "fancy-stones": true,
+    "resume-previous-game": false,
+    "new-move-number-in-branch": true,
+    "shadows-enabled": true,
+    "show-katago-boardscoremean": true,
+    "show-katago-estimate-onsubboard": true,
+    "show-variation-graph": true,
+    "show-dynamic-komi": true,
+    "gtp-console-style": "body {background:#000000; color:#d0d0d0; font-family:Consolas, Menlo, Monaco, 'Ubuntu Mono', monospace; margin:4px;} .command {color:#ffffff;font-weight:bold;} .winrate {color:#ffffff;font-weight:bold;} .coord {color:#ffffff;font-weight:bold;}",
+    "katago-scoremean-alwaysblack": false,
+    "katago-notshow-winrate": false,
+    "minimum-blunder-bar-width": 3,
+    "large-winrate": false,
+    "show-blunder-bar": false,
+    "only-last-move-number": 0,
+    "confirm-exit": false,
+    "show-status": true,
+    "handicap-instead-of-winrate": false,
+    "large-subboard": false,
+    "dynamic-winrate-graph-width": false,
+    "show-katago-estimate-onmainboard": true,
+    "show-subboard": true,
+    "show-katago-scoremean": true,
+    "show-katago-estimate": true,
+    "show-best-moves": true,
+    "board-size": 19
+  }
+}
+EOF
+
 # Lizzie.run
 cat > ~/Lizzie.run <<EOF
 #!/bin/bash
