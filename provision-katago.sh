@@ -21,6 +21,7 @@ sudo apt install -y \
     dnsutils \
     dstat \
     git \
+    icewm \
     jq \
     libboost-filesystem-dev \
     libgoogle-perftools-dev \
