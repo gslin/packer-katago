@@ -88,6 +88,16 @@ cd ~/.icewm
 cp /usr/share/icewm/menu ~/.icewm/menu
 echo "prog Lizzie Lizzie /home/ubuntu/Lizzie.run" >> ~/.icewm/menu
 
+# VNC password (default: katago)
+mkdir ~/.vnc
+cd ~/.vnc
+uudecode <<EOF
+begin 600 passwd
+(OMP?ZSC,,>4`
+`
+end
+EOF
+
 # reboot script
 echo "@reboot tightvncserver -depth 24 -geometry 1680x1050" > ~/crontab.ubuntu
 crontab ~/crontab.ubuntu
