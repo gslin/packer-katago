@@ -89,3 +89,7 @@ mkdir ~/.icewm
 cd ~/.icewm
 cp /usr/share/icewm/menu ~/.icewm/menu
 echo "prog Lizzie Lizzie /home/ubuntu/Lizzie.run" >> ~/.icewm/menu
+
+# reboot script
+echo "@reboot tightvncserver -depth 24 -geometry 1680x1050" > ~/crontab.ubuntu
+crontab ~/crontab.ubuntu
