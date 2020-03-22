@@ -75,3 +75,11 @@ wget \
     https://github.com/lightvector/KataGo/releases/download/v1.3.3/g170e-b20c256x2-s2430231552-d525879064.bin.gz \
     https://github.com/lightvector/KataGo/releases/download/v1.3.3/g170-b30c320x2-s1287828224-d525929064.bin.gz \
     https://github.com/lightvector/KataGo/releases/download/v1.3.3/g170-b40c256x2-s1349368064-d524332537.bin.gz
+
+# Lizzie.run
+cat > ~/Lizzie.run <<EOF
+#!/bin/bash
+cd ~/Lizzie
+exec java -jar lizzie.jar
+EOF
+chmod 755 ~/Lizzie.run
