@@ -61,7 +61,7 @@ unzip /tmp/Lizzie.0.7.2.Mac-Linux.zip
 
 # KataGo (software)
 cd ~
-git clone https://github.com/lightvector/KataGo.git
+git clone -b v1.3.5 https://github.com/lightvector/KataGo.git
 cd ~/KataGo/cpp
 cmake . -DBUILD_MCTS=1 -DUSE_BACKEND=OPENCL -DUSE_TCMALLOC=1
 make -j8
@@ -70,9 +70,9 @@ cp ~/KataGo/cpp/katago ~/Lizzie
 # KataGo (net)
 cd ~/Lizzie
 wget \
-    https://github.com/lightvector/KataGo/releases/download/v1.3.3/g170e-b20c256x2-s2430231552-d525879064.bin.gz \
-    https://github.com/lightvector/KataGo/releases/download/v1.3.3/g170-b30c320x2-s1287828224-d525929064.bin.gz \
-    https://github.com/lightvector/KataGo/releases/download/v1.3.3/g170-b40c256x2-s1349368064-d524332537.bin.gz
+    https://github.com/lightvector/KataGo/releases/download/v1.3.5-nets/g170e-b20c256x2-s3761649408-d809581368.bin.gz \
+    https://github.com/lightvector/KataGo/releases/download/v1.3.5-nets/g170-b30c320x2-s2846858752-d829865719.bin.gz \
+    https://github.com/lightvector/KataGo/releases/download/v1.3.5-nets/g170-b40c256x2-s2990766336-d830712531.bin.gz<Paste>
 
 # GTP settings
 cp ~/KataGo/cpp/configs/gtp_example.cfg ~/Lizzie/
