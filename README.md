@@ -1,6 +1,6 @@
 # packer-katago
 
-WIP.
+Create Amazon EC2 AMI for Lizzie + KataGo, using Packer.
 
 # License
 
