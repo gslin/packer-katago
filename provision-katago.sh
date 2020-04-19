@@ -88,7 +88,7 @@ cat > ~/Lizzie/config.txt <<EOF
     "max-game-thinking-time-seconds": 2,
     "engine-start-location": ".",
     "avoid-keep-variations": 30,
-    "engine-command": "./katago gtp -model g170-b40c256x2-s1349368064-d524332537.bin.gz -config gtp_example.cfg",
+    "engine-command": "./katago gtp -model g170-b40c256x2-s2990766336-d830712531.bin.gz -config gtp_example.cfg",
     "print-comms": false,
     "show-lcb-winrate": false
   },
